@@ -5,59 +5,68 @@
 <style>
     .calculator-container{
         height: 500px;
-        width: 400px;
-        background-color: #666970;
+        width: 330px;
+        background-color: #20222e;
         margin-left: auto;
         margin-right:auto;
         margin-top: 100px;
-        border-radius: 10px;
+        border-radius: 15px;
 
     }
     .brand-name{
         padding-top: 20px;
         margin-left: 20px;
-        color: aliceblue;
+        color: rgb(165, 186, 205);
         font-size: 20px;
     }
     .calculator-screen{
         font-size: 50px;
-        width: 350px;
+        width: 300px;
         display: block;
         margin-left: auto;
         margin-right: auto;
-        background-color: #e9faa4;
+        background-color: #e3fa88;
         margin-bottom: 20px;
+        border-color: rgb(166, 91, 7);
 
     }
     .buttons-container{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-
     }
     .calculator-button{
-        background-color: cornsilk;
-        height: 60px;
-        width: 60px;
-        margin: 5px;
+        background-color: rgb(226, 196, 74);
+        height: 50px;
+        width: 50px;
+        margin: 4px;
         border-radius: 8px;
-        font-size: 30px;
-        border: 2px solid #bbc185;
+        font-size: 15px;
+        border: 2px solid #870d19;
         font-weight: bold;
         cursor: pointer;
     }
     .calculator-button:hover{
-        box-shadow: 0 2px 5px whitesmoke;
-        transition: 0.4s;
+        box-shadow: 0 5px 8px rgb(199, 118, 118);
+        transition: 0.10s;
         text-align: center;
-        color: cadetblue;
+        color: rgb(82, 107, 223);
         -ms-touch-action: auto;
     }
+    .btn-color{
+        box-shadow: 0 0px 7px rgb(154, 147, 195);
+    
+    }
     .bg-red{
-        background-color: rgb(225, 187, 138);
+        background-color: rgb(142, 83, 5);
         color: aliceblue;
     }
-    
+    .size-button{
+        width: 51px;
+    }
+    .font-size{
+        font-size:30px
+    }
     
 </style>
 </head>
@@ -66,29 +75,43 @@
     <p class="brand-name">Casio</p>
     <input type="text" class="calculator-screen"/>
     <div class="buttons-container">
-        <button class="calculator-button">7</button>
-        <button class="calculator-button">8</button>
-        <button class="calculator-button">9</button>
-        <button class="calculator-button bg-red">+</button>
+        <button class="calculator-button font-size">7</button>
+        <button class="calculator-button  font-size">8</button>
+        <button class="calculator-button  font-size">9</button>
+        <button class="calculator-button  btn-color font-size bg-red">+</button>
     </div>
     <div class="buttons-container">
-        <button class="calculator-button">4</button>
-        <button class="calculator-button">5</button>
-        <button class="calculator-button">6</button>
-        <button class="calculator-button bg-red">-</button>
+        <button class="calculator-button  font-size">4</button>
+        <button class="calculator-button  font-size">5</button>
+        <button class="calculator-button  font-size">6</button>
+        <button class="calculator-button   btn-color font-size bg-red">-</button>
     </div>
     <div class="buttons-container">
-        <button class="calculator-button">3</button>
-        <button class="calculator-button">2</button>
-        <button class="calculator-button">1</button>
-        <button class="calculator-button bg-red">*</button>
+        <button class="calculator-button  font-size">3</button>
+        <button class="calculator-button  font-size">2</button>
+        <button class="calculator-button  font-size">1</button>
+        <button class="calculator-button  btn-color font-size bg-red">*</button>
+    </div>
+
+    <div class="buttons-container">
+        <button class="calculator-button  font-size">0</button>
+        <button class="calculator-button ">sin</button>
+        <button class="calculator-button ">cos</button>
+        <button class="calculator-button  btn-color font-size bg-red">/</button>
     </div>
     <div class="buttons-container">
-        <button class="calculator-button">0</button>
-        <button class="calculator-button bg-red">/</button>
-        <button class="calculator-button bg-red">.</button>
-        <button class="calculator-button bg-red">=</button>
+        <button class="calculator-button">tan</button>
+        <button class="calculator-button">cot</button>
+        <button class="calculator-button">sec</button>
+        <button class="calculator-button  btn-color font-size bg-red">%</button>
     </div>
+    <div class="buttons-container">
+        <button class="calculator-button size-button">cosec</button>
+        <button class="calculator-button  btn-color font-size bg-red">.</button>
+        <button class="calculator-button  btn-color font-size bg-red">^</button>
+        <button class="calculator-button  btn-color font-size bg-red">=</button>
+    </div>
+    
 </div>
 </body>
 </html>
