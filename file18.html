@@ -55,7 +55,6 @@
     }
     .btn-color{
         box-shadow: 0 0px 7px rgb(154, 147, 195);
-    
     }
     .bg-red{
         background-color: rgb(142, 83, 5);
@@ -70,46 +69,75 @@
     
 </style>
 </head>
+<script>
+    function handleClick(val)
+    {
+      const inputBox = document.getElementById("calculator-screen");
+      inputBox.value = (inputBox.value + val);
+    }
+
+    function calculate()
+    {
+        const inputBox = document.getElementById("calculator-screen");
+        const ans = eval(inputBox.value);
+        inputBox.value = ans;
+    }
+
+    function clearScreen()
+    {
+        const inputBox = document.getElementById("calculator-screen");
+        inputBox.value = "";
+    }
+    
+    function calculate()
+    {
+        const inputBox = document.getElementById("calculator-screen");
+        const ans = eval(inputBox.value)
+        inputBox.value = ans;
+    }
+</script>
+
 <body>
 <div class="calculator-container">
     <p class="brand-name">Casio</p>
-    <input type="text" class="calculator-screen"/>
+
+    <input type="text" class="calculator-screen" id="calculator-screen"/>
     <div class="buttons-container">
-        <button class="calculator-button font-size">7</button>
-        <button class="calculator-button  font-size">8</button>
-        <button class="calculator-button  font-size">9</button>
-        <button class="calculator-button  btn-color font-size bg-red">+</button>
+        <button class="calculator-button font-size" onClick="handleClick(7)">7</button>
+        <button class="calculator-button  font-size" onClick="handleClick(8)">8</button>
+        <button class="calculator-button  font-size" onClick="handleClick(9)">9</button>
+        <button class="calculator-button" onClick="clearScreen()">CE</button>
     </div>
     <div class="buttons-container">
-        <button class="calculator-button  font-size">4</button>
-        <button class="calculator-button  font-size">5</button>
-        <button class="calculator-button  font-size">6</button>
-        <button class="calculator-button   btn-color font-size bg-red">-</button>
+        <button class="calculator-button  font-size" onClick="handleClick(4)">4</button>
+        <button class="calculator-button  font-size" onClick="handleClick(5)">5</button>
+        <button class="calculator-button  font-size" onClick="handleClick(6)">6</button>
+        <button class="calculator-button   btn-color font-size bg-red" onClick="handleClick('+')">+</button>
     </div>
     <div class="buttons-container">
-        <button class="calculator-button  font-size">3</button>
-        <button class="calculator-button  font-size">2</button>
-        <button class="calculator-button  font-size">1</button>
-        <button class="calculator-button  btn-color font-size bg-red">*</button>
+        <button class="calculator-button  font-size" onClick="handleClick(3)">3</button>
+        <button class="calculator-button  font-size" onClick="handleClick(2)">2</button>
+        <button class="calculator-button  font-size" onClick="handleClick(1)">1</button>
+        <button class="calculator-button  btn-color font-size bg-red" onClick="handleClick('-')">-</button>
     </div>
 
     <div class="buttons-container">
-        <button class="calculator-button  font-size">0</button>
-        <button class="calculator-button ">sin</button>
-        <button class="calculator-button ">cos</button>
-        <button class="calculator-button  btn-color font-size bg-red">/</button>
+        <button class="calculator-button  font-size" onClick="handleClick(0)">0</button>
+        <button class="calculator-button " onClick="handleClick('sin')">sin</button>
+        <button class="calculator-button " onClick="handleClick('cos')">cos</button>
+        <button class="calculator-button  btn-color font-size bg-red" onClick="handleClick('*')">*</button>
     </div>
     <div class="buttons-container">
-        <button class="calculator-button">tan</button>
-        <button class="calculator-button">cot</button>
-        <button class="calculator-button">sec</button>
-        <button class="calculator-button  btn-color font-size bg-red">%</button>
+        <button class="calculator-button" onClick="handleClick('tan')">tan</button>
+        <button class="calculator-button" onClick="handleClick('cot')">cot</button>
+        <button class="calculator-button" onClick="handleClick('sec')">sec</button>
+        <button class="calculator-button  btn-color font-size bg-red" onClick="handleClick('/')">/</button>
     </div>
     <div class="buttons-container">
-        <button class="calculator-button size-button">cosec</button>
-        <button class="calculator-button  btn-color font-size bg-red">.</button>
-        <button class="calculator-button  btn-color font-size bg-red">^</button>
-        <button class="calculator-button  btn-color font-size bg-red">=</button>
+        <button class="calculator-button size-button" onClick="handleClick('cosec')">cosec</button>
+        <button class="calculator-button  btn-color font-size bg-red" onClick="handleClick('%')">%</button>
+        <button class="calculator-button  btn-color font-size bg-red" onClick="handleClick('^')">^</button>
+        <button class="calculator-button  btn-color font-size bg-red" onClick=calculate()>=</button>
     </div>
     
 </div>
